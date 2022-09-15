@@ -9,11 +9,13 @@ body {
   background-size: cover;
   background-position: left top;
   font-family: "Zilla Slab", serif;
+  
 }
 
 .box-container {
   width: 70%;
   margin: 0 auto;
+  
 }
 
 #question {
@@ -63,8 +65,8 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 20%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -95,6 +97,7 @@ body {
 }
 .hidden {
   display: none;
+  margin-left: 100px;
 }
 .title {
   text-align: center;
@@ -142,17 +145,22 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
 }
 
 .card {
   width: 100%;
   height: 100%;
   padding: 50px;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr;
+
+  /* justify-content: space-between; */
   align-items: center;
   padding: 20px 30px;
   color: white;
@@ -177,8 +185,9 @@ button {
   backdrop-filter: blur(5px);
   height: 100vh;
   width: 100%;
-  position: fixed;
-  top: 0;
+  position: fixed; 
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 700px) {
@@ -188,5 +197,10 @@ button {
   }
   .card {
     flex-direction: column;
+    
+  }
+  #histories{
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
